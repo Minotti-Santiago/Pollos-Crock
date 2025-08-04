@@ -1,0 +1,61 @@
+Menu
+
+🍗 1. Combo Clásico
+Descripción:
+2 piezas de pollo frito crocante, papas a la francesa medianas y gaseosa 400ml.
+Precio: $18.900 COP
+
+🍗 2. Súper Bucket Familiar
+Descripción:
+8 piezas de pollo, 2 porciones grandes de papas, 4 arepas, y 1 gaseosa de 1.5L. Ideal para compartir.
+Precio: $52.000 COP
+
+🍔 3. Pollo Burger Xtreme
+Descripción:
+Hamburguesa de pollo crispy con lechuga, tomate, queso cheddar y salsa especial, acompañada de papas y bebida.
+Precio: $21.500 COP
+
+🐔 4. Alitas BBQ Combo
+Descripción:
+6 alitas bañadas en salsa BBQ o picante, papas a la francesa y bebida 400ml.
+Precio: $22.000 COP
+
+🍟 5. Chiki Snack Box
+Descripción:
+4 nuggets de pollo, papas pequeñas, 1 mini gaseosa y 1 salsa a elección (BBQ, tártara o miel-mostaza).
+Precio: $13.900 COP
+
+🥤 6. Combo Parrillero
+Descripción:
+Filete de pechuga a la parrilla con toque de especias, acompañado de arroz, ensalada fresca y jugo natural.
+Precio: $20.500 COP
+
+
+----------------------
+
+Para sacar info de textos 
+
+https://www.instagram.com/pollos_crock?igsh=MTBmMWszaDBmMXR0ZQ%3D%3D
+
+----------------------------
+
+Vincular el ig a al footer
+Vincular por ahora mi whatsapp àra pruebas : 3424464476
+
+-----------------------------
+
+Inventar 3 puntos de locacion de locales take away.
+
+-----------
+
+Hacer un carrito, y alert cuando se agrega un producto. "producto agregar -- seguir compradno --- finalizar compra"
+
+-------
+
+Sobre nosotros:
+
+En Pollos Crock, nos apasiona el sabor auténtico del pollo frito. Combinamos una receta crujiente, jugosa y llena de sabor con ingredientes frescos y atención rápida para ofrecer una experiencia deliciosa en cada visita. Somos un equipo comprometido con brindar comida rápida de calidad, con porciones generosas y precios justos. ¡Ven y descubre por qué nuestro pollo es el favorito de todos!
+
+----------------
+
+Todo debe ser responsive
