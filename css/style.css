@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -37,6 +38,10 @@ body{
 
 }
 
+.introduction--part img{
+    animation: slideIn .6s linear;
+}
+
 .introduction--text{
     color: #FFFFFF;
     font-size: 1.1rem;
@@ -52,7 +57,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 5px 10px;
-    background-color: #F7AE00;
+    background-color: #f99e27;
     width: fit-content;
     border-radius: 5px;
     text-decoration: none;
@@ -63,6 +68,24 @@ body{
 .pedido--title{
     color: #FFFFFF;
     margin-top: 10px;
+}
+
+.volver--button{
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+}
+
+.volver--button svg{
+    width: 23px;
+    fill: #FFFFFF;
+    
 }
 
 /*------------------------------- HEADER SECTION -------------------------------*/
@@ -132,8 +155,8 @@ body{
     width: 100%;
     background-image: url(../assets/images/Pollos\ Crock-04.png);
     background-size: cover;
-    background-position: top;
-    min-height: 200vh;
+    background-position: center;
+    min-height: 100vh;
 }
 
 .menu--title-container, .finalizar--pedido-button-container{
@@ -178,15 +201,11 @@ body{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 40px;
+    box-shadow: 0 0 10px #000000;
 }
 
 .img--food-container{
-    background-color: #FF0000;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
     margin-top: 30px;
-
 }
 
 .card--food-container{
@@ -200,12 +219,13 @@ body{
     color: #FF0000;
     font-size: 1.8rem;
     font-weight: 800;
+    text-align: center;
 }
 
 .card--food-price{
     color: #FF0000;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .card--food-description{
@@ -217,13 +237,152 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
+.img--food-container img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: -10px 0 0 #FF0000;
+}
 
+.take--away-section{
+    background-color: #cd001a;
+    
+}
 
-/*------------------------------- MEDIA QUERIES SECTION -------------------------------*/
-
-@media screen and (min-width: 700px){
+.take--away-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 
 }
+
+.take--away-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.take--away-map h3{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.take--away-map iframe{
+    width:360px;
+    height: 40vh;
+    border-radius: 40px;
+}
+
+.take--away-image img{
+    width: 90vw;
+}
+
+.nosotros--section{
+    background-color: #f99e27;
+    height: 110vh;
+}
+
+.nosotros--container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+}
+
+.nosotros--image-container img{
+    height: 60vh;
+    width: 370px;
+
+}
+
+.nosotros--info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.nosotros--title{
+    color: #3d3b4a;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+footer{
+    background-color: #3d3b4a;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 40vh;
+}
+
+.footer--contacts-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts--container{
+    color: #FFFFFF;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.contacts--container svg{
+    width: 39px;
+    fill: #FFFFFF;
+}
+
+.footer--img-container img{
+    width: 150px;
+}
+
+.principal--part-menu{
+    background-color:#cd001a;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.principal--image-menu-container img{
+    width: 90vw;
+    animation: slideUp .6s linear;
+}
+
+.principal--title-menu-container h1{
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cards--menu-section{
+    background-color: #f99e27;
+    padding-bottom: 50px;
+}
+
+.link4 a{
+    display: flex;
+    gap: 5px;
+}
+
+.link4 svg{
+    width: 25px;
+    fill: #FFFFFF;
+
+}
+
+/*------------------------------- MEDIA QUERIES SECTION -------------------------------*/
 
 @media screen and (min-width:900px) {
     .principal--image{
@@ -292,12 +451,105 @@ body{
     .pedido--container{
         margin-top: 50px;
     }
+
+    .take--away-image img{
+        width: 600px;
+    
+    }
+
+    .take--away-map iframe{
+        width: 600px;
+    }
+
+    .take--away-map h3{
+        font-size: 2.5rem;
+    }
+
+    .nosotros--section{
+        height: 60vh;
+    }
+
+    .nosotros--container{
+        flex-direction: row;
+        padding: 40px 20px 0;
+        gap: 30px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .nosotros--info-container{
+        align-items: start;
+    }
+
+    .nosotros--image-container img{
+        width: 450px;
+        height: 50vh;
+
+    }
+
+    footer{
+        flex-direction: row;
+        min-height: 10vh;
+    }
+
+    .footer--contacts-container{
+        flex-direction: row;
+    }
+
+    .principal--image-menu-container img{
+        width: 600px;
+    }
+    
 }
 
 @media screen and (min-width:1200px){
     .header--navbar ul{
-        width: 30%;
+        width: 50%;
     }
 
+    .take--away-map iframe{
+        width: 550px;
+        height: 350px;
+    }
 
+    .take--away-container{
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .nosotros--container{
+        max-width: 1290px;
+    }
+
+    .nosotros--info-container{
+        max-width: 600px;
+    }
+
+    .principal--image-menu-container img{
+        width: 30vw;
+    }
 }
+
+/*------------------------------- MEDIA QUERIES SECTION -------------------------------*/
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(-150%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
