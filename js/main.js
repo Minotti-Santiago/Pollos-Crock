@@ -32,17 +32,20 @@ fetch("productos.json")
 
             card.innerHTML = `
                 <div class="img--food-container">
-                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                  <img src="${producto.image}" alt="${producto.name}">
                 </div>
                 <div class="card--food-container">
-                    <h3 class="card--food-name">${producto.nombre}</h3>
-                    <p class="card--food-price">${producto.precio}</p>
-                    <p class="card--food-description">${producto.descripcion}</p>
+                  <h3 class="card--food-name">${producto.name}</h3>
+                  <p class="card--food-price">$ ${producto.price}</p>
+                  <p class="card--food-description">${producto.desc}</p>
                 </div>
-                <a href="#">AGREGAR A MI PEDIDO</a>
+                <button class="agregar"
+                data-name="${producto.name}" 
+                data-price="${producto.price}" 
+                data-image="${producto.image}"
+                >Agregar</button>
             `;
 
-            // Insertar tarjeta en el contenedor
             cardsContainer.appendChild(card);
         });
     })
@@ -62,17 +65,101 @@ fetch("productos.json")
 
       card.innerHTML = `
         <div class="img--food-container">
-          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <img src="${producto.image}" alt="${producto.name}">
         </div>
         <div class="card--food-container">
-          <h3 class="card--food-name">${producto.nombre}</h3>
-          <p class="card--food-price">${producto.precio}</p>
-          <p class="card--food-description">${producto.descripcion}</p>
+          <h3 class="card--food-name">${producto.name}</h3>
+          <p class="card--food-price">$ ${producto.price}</p>
+          <p class="card--food-description">${producto.desc}</p>
         </div>
-        <a href="#">AGREGAR A MI PEDIDO</a>
+        <button class="agregar" 
+        data-name="${producto.name}" 
+        data-price="${producto.price}" 
+        data-image="${producto.image}"
+        >Agregar</button>
       `;
 
       menuContainer.appendChild(card);
     });
   })
   .catch(error => console.error("Error al cargar productos:", error));
+
+
+  let cartStorage = JSON.parse(localStorage.getItem('myProducts')) || []
+
+  function saveInStorage(){
+    localStorage.setItem('myProducts', JSON.stringify(cartStorage))
+  }
+
+  document.addEventListener('click', (e) => {
+  if ( e.target.classList.contains('agregar')) {
+    const name = e.target.dataset.name;
+    const price = e.target.dataset.price;
+    const image = e.target.dataset.image;
+  
+    addToCart(name, price, image);
+  }
+});
+
+
+function addToCart(name,price, image){
+  const product = {
+    name: name,
+    price: price,
+    image: image,
+    quantity : 1,
+  }
+
+  cartStorage.push(product)
+  saveInStorage()
+  renderCart()
+
+}
+
+function renderCart(){
+  const productsContainer = document.getElementById('products-container')
+  if (!productsContainer) return;
+  
+  productsContainer.innerHTML = ''
+
+  cartStorage.forEach((product, index) => {
+
+    const productContent = document.createElement('div')
+    productContent.classList.add('product-content')
+
+    productContent.innerHTML =`
+      <div class="img--food-container">
+        <img src="${product.image}" alt="${product.name}">
+      </div>
+      <h3>${product.name}</h3>
+      <p>$ ${product.price}</p>
+      <button class="eliminar">Eliminar</button>
+    `
+
+    productContent.querySelector('.eliminar').addEventListener('click', ()=>{
+      cartStorage.splice(index, 1)
+      saveInStorage()
+      renderCart()
+    })
+
+    productsContainer.appendChild(productContent)
+
+  })
+
+  updateTotal()
+}
+
+function updateTotal(){
+  const totalContainer = document.getElementById('totalContainer')
+
+  const total = cartStorage.reduce((acc, product) => acc + (parseFloat(product.price) * product.quantity), 0)
+
+  if(totalContainer){
+    totalContainer.innerHTML = `
+    <h2>Total: $${total.toFixed(3)}</h2>
+    <button class="buy--button">COMPRAR</button>
+    `
+  }
+}
+
+renderCart()

@@ -1,56 +1,56 @@
 [
     {
-        "nombre": "Combo Clásico",
-        "descripcion": "2 piezas de pollo frito crocante, papas a la francesa medianas y gaseosa 400ml.",
-        "precio": "$18.900 COP",
-        "imagen": "assets/images/imagenes-menu/alitas-de-pollo.png"
+        "name": "Combo Clásico",
+        "desc": "2 piezas de pollo frito crocante, papas a la francesa medianas y gaseosa 400ml.",
+        "price": "18.900 COP",
+        "image": "assets/images/imagenes-menu/alitas-de-pollo.png"
     },
     {
-        "nombre": "Súper Bucket Familiar",
-        "descripcion": "8 piezas de pollo, 2 porciones grandes de papas, 4 arepas, y 1 gaseosa de 1.5L. Ideal para compartir.",
-        "precio": "$52.000 COP",
-        "imagen": "assets/images/imagenes-menu/burritos.png"
+        "name": "Súper Bucket Familiar",
+        "desc": "8 piezas de pollo, 2 porciones grandes de papas, 4 arepas, y 1 gaseosa de 1.5L. Ideal para compartir.",
+        "price": "52.000 COP",
+        "image": "assets/images/imagenes-menu/burritos.png"
     },
     {
-        "nombre": "Pollo Burger Xtreme",
-        "descripcion": "Hamburguesa de pollo crispy con lechuga, tomate, queso cheddar y salsa especial, acompañada de papas y bebida.",
-        "precio": "$21.500 COP",
-        "imagen": "assets/images/imagenes-menu/milanesa.png"
+        "name": "Pollo Burger Xtreme",
+        "desc": "Hamburguesa de pollo crispy con lechuga, tomate, queso cheddar y salsa especial, acompañada de papas y bebida.",
+        "price": "21.500 COP",
+        "image": "assets/images/imagenes-menu/milanesa.png"
     },
     {
-        "nombre": "Alitas BBQ Combo",
-        "descripcion": "6 alitas bañadas en salsa BBQ o picante, papas a la francesa y bebida 400ml.",
-        "precio": "$22.000 COP",
-        "imagen": "assets/images/imagenes-menu/papas-quesudas.png"
+        "name": "Alitas BBQ Combo",
+        "desc": "6 alitas bañadas en salsa BBQ o picante, papas a la francesa y bebida 400ml.",
+        "price": "22.000 COP",
+        "image": "assets/images/imagenes-menu/papas-quesudas.png"
     },
     {
-        "nombre": "Chiki Snack Box",
-        "descripcion": "4 nuggets de pollo, papas pequeñas, 1 mini gaseosa y 1 salsa a elección (BBQ, tártara o miel-mostaza).",
-        "precio": "$13.900 COP",
-        "imagen": "assets/images/imagenes-menu/pollos.png"
+        "name": "Chiki Snack Box",
+        "desc": "4 nuggets de pollo, papas pequeñas, 1 mini gaseosa y 1 salsa a elección (BBQ, tártara o miel-mostaza).",
+        "price": "13.900 COP",
+        "image": "assets/images/imagenes-menu/pollos.png"
     },
     {
-        "nombre": "Combo Parrillero",
-        "descripcion": "Filete de pechuga a la parrilla con toque de especias, acompañado de arroz, ensalada fresca y jugo natural.",
-        "precio": "$20.500 COP",
-        "imagen": "assets/images/imagenes-menu/tenders.png"
+        "name": "Combo Parrillero",
+        "desc": "Filete de pechuga a la parrilla con toque de especias, acompañado de arroz, ensalada fresca y jugo natural.",
+        "price": "20.500 COP",
+        "image": "assets/images/imagenes-menu/tenders.png"
     },
     {
-        "nombre": "Wrap de Pollo Mediterráneo",
-        "descripcion": "Tortilla rellena de pollo a la plancha, vegetales frescos, hummus y salsa tzatziki.",
-        "precio": "$17.800 COP",
-        "imagen": "assets/images/imagenes-menu/pollo-entero.png"
+        "name": "Wrap de Pollo Mediterráneo",
+        "desc": "Tortilla rellena de pollo a la plancha, vegetales frescos, hummus y salsa tzatziki.",
+        "price": "17.800 COP",
+        "image": "assets/images/imagenes-menu/pollo-entero.png"
     },
     {
-        "nombre": "Ensalada César con Pollo",
-        "descripcion": "Lechuga fresca, crutones, queso parmesano, aderezo César y pechuga de pollo grillada.",
-        "precio": "$16.500 COP",
-        "imagen": "assets/images/imagenes-menu/nuggets.png"
+        "name": "Ensalada César con Pollo",
+        "desc": "Lechuga fresca, crutones, queso parmesano, aderezo César y pechuga de pollo grillada.",
+        "price": "16.500 COP",
+        "image": "assets/images/imagenes-menu/nuggets.png"
     },
     {
-        "nombre": "Mega Combo BBQ",
-        "descripcion": "Costillas de cerdo bañadas en salsa BBQ, papas a la francesa grandes, ensalada de la casa y gaseosa 1.5L.",
-        "precio": "$55.000 COP",
-        "imagen": "assets/images/imagenes-menu/pollo-broaster.png"
+        "name": "Mega Combo BBQ",
+        "desc": "Costillas de cerdo bañadas en salsa BBQ, papas a la francesa grandes, ensalada de la casa y gaseosa 1.5L.",
+        "price": "55.000 COP",
+        "image": "assets/images/imagenes-menu/pollo-broaster.png"
     }
 ]
