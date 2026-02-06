@@ -103,6 +103,16 @@ fetch("productos.json")
 
 
 function addToCart(name,price, image){
+
+  const existingProduct = cartStorage.find(product => product.name === name)
+
+  if( existingProduct ){
+    existingProduct.quantity += 1
+    saveInStorage()
+    renderCart()
+    return
+  } 
+
   const product = {
     name: name,
     price: price,
@@ -127,14 +137,19 @@ function renderCart(){
     const productContent = document.createElement('div')
     productContent.classList.add('product-content')
 
+    const subtotal = parseFloat(product.price) * product.quantity
+
     productContent.innerHTML =`
-      <div class="img--food-container">
+      <div class="img--food-container cart-img">
         <img src="${product.image}" alt="${product.name}">
       </div>
-      <h3>${product.name}</h3>
-      <p>$ ${product.price}</p>
+      <h3> ${product.name}</h3>
+      <p> $${subtotal.toFixed(3)}</p>
+      <p>cantidad: ${product.quantity}</p>
       <button class="eliminar">Eliminar</button>
     `
+
+
 
     productContent.querySelector('.eliminar').addEventListener('click', ()=>{
       cartStorage.splice(index, 1)
@@ -145,6 +160,10 @@ function renderCart(){
     productsContainer.appendChild(productContent)
 
   })
+
+  if(cartStorage.length === 0){
+    productsContainer.innerHTML = `<h2>El carrito está vacío</h2>`
+  }
 
   updateTotal()
 }
@@ -161,5 +180,11 @@ function updateTotal(){
     `
   }
 }
+
+
+
+
+
+
 
 renderCart()
